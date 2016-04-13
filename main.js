@@ -11,6 +11,6 @@ $(document).ready(function() {
         radius = Math.sqrt(Math.pow(tiltx,2) + Math.pow(tilty,2));
         degree = (radius * 20);
 
-        $('#cube').css('-webkit-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
+        $('#cube, #button').css('-webkit-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
     });
 });
