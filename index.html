@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+    "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Juan Cortes - Technologist and developer</title>
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<script src="main.js"></script>
 	<link rel="stylesheet" href="styles.css">
 </head>
@@ -16,22 +19,44 @@
 	    	<div class="screen">
 	    		<div class="intro">
 	    			<p>Hello, my name is Juan Cortes and I am a web engineer.
-	    			I'm also a project director, digital/communication strategist and design thinker.</p>
-	    			<p>Turn the TV on to see my work</p>
-	    			<p>I built this site in a couple evenings using CSS, HTML5 and jQuery</p>
+	    			I'm also a project director, digital/communication strategist, <br /> and design thinker, currently available for comissions and projects.</p>
+	    			<p>Turn the TV on 
+
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="on-icon pow"
+									 viewBox="0 0 78 78" enable-background="new 0 0 78 78" xml:space="preserve">
+								<g>
+									<circle id="background" fill="#010101" cx="39" cy="39" r="37.7"/>
+									<path id="circular-border" fill="#FFFFFF" d="M39,8.3C22.2,8.3,8.5,22,8.5,38.8c0,16.8,13.7,30.5,30.5,30.5s30.5-13.7,30.5-30.5C69.5,22,55.8,8.3,39,8.3
+										z M39,64.3c-14.1,0-25.5-11.4-25.5-25.5c0-14.1,11.4-25.5,25.5-25.5c14.1,0,25.5,11.4,25.5,25.5C64.5,52.9,53.1,64.3,39,64.3z"/>
+									<path id="icon-semicircle" fill="#FFFFFF" d="M46.3,28.3l-2.8,4.1c2.1,1.5,3.4,3.9,3.4,6.5c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-2.6,1.3-5,3.4-6.4
+										l-2.8-4.1c-3.5,2.4-5.5,6.3-5.5,10.6c0,7.1,5.8,12.8,12.8,12.8c7.1,0,12.8-5.8,12.8-12.8C51.8,34.6,49.8,30.7,46.3,28.3z"/>
+									<rect id="icon-rectangle" x="36.5" y="21.8" fill="#FFFFFF" width="5" height="15"/>
+								</g>
+					</svg>
+
+	    			 to see my work</p>
+	    			
+	    			<p class="intro-links"><a href="#" class="cv-link">CV</a> <a href="mailto:juancoob@gmail.com">Contact</a></p>
 	    		</div>
-	    		<video src="antarcticsite.mp4"></video>
+	    		<video src="antarcticsite.mp4" loop></video>
 	    		<div class="vid caption">
-		    		<p><a href="#">Link to Project</a> <a href="#" class="info-icon">info</a></p>
-		    		<p>Client: Client Name</p>
+		    		<p>
+		    			<span>Client:</span> <span>Project Name</span> <br/>
+		    			<a href="#" class="info-icon">info</a>
+		    		</p>
 	    		</div>
 	    		<div class="vid channel"><p>1</p></div>
 	    		<div class="vid info">
-	    		<p>This is the information of the first video</p>
-	    		<p>I'm going to say a little what I did for each project?</p>
-	    		<p>i.e. "I was the lead developer for the project. It was built with pure HTML+CSS+jQuery."</p>
-	    		<p>Is it necessary? Or will the info on the previous screen be enough?</p>
-	    		<a href="#" class="close">back</a>
+		    		<section class="single-info">
+			    		<p>This is the information of the first video</p>
+			    		<p>I'm going to say a little what I did for each project?</p>
+			    		<p>i.e. "I was the lead developer for the project. It was built with pure HTML+CSS+jQuery."</p>
+			    		<p>Is it necessary? Or will the info on the previous screen be enough?</p>
+		    		</section>
+		    		<p class="info-links">
+						<a href="" target="_blank" class="project-link">Visit</a>
+			    		<a href="#" class="close">Back</a>
+		    		</p>
 	    		</div>
 	    	</div>
 	    </figure>
@@ -46,18 +71,79 @@
 	    		<section class="button-container">
 				 <div id="button">
 				    <figure class="button-front">
-							<div class="pow">pow</div>
-							<div class="prev">up</div>
-							<div class="next">down</div>
+							<div class="pow">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="power"
+									 viewBox="0 0 78 78" enable-background="new 0 0 78 78" xml:space="preserve">
+								<g>
+									<circle id="background" fill="#010101" cx="39" cy="39" r="37.7"/>
+									<path id="circular-border" fill="#07A651" d="M39,8.3C22.2,8.3,8.5,22,8.5,38.8c0,16.8,13.7,30.5,30.5,30.5s30.5-13.7,30.5-30.5C69.5,22,55.8,8.3,39,8.3
+										z M39,64.3c-14.1,0-25.5-11.4-25.5-25.5c0-14.1,11.4-25.5,25.5-25.5c14.1,0,25.5,11.4,25.5,25.5C64.5,52.9,53.1,64.3,39,64.3z"/>
+									<path id="icon-semicircle" fill="#07A651" d="M46.3,28.3l-2.8,4.1c2.1,1.5,3.4,3.9,3.4,6.5c0,4.3-3.5,7.8-7.8,7.8s-7.8-3.5-7.8-7.8c0-2.6,1.3-5,3.4-6.4
+										l-2.8-4.1c-3.5,2.4-5.5,6.3-5.5,10.6c0,7.1,5.8,12.8,12.8,12.8c7.1,0,12.8-5.8,12.8-12.8C51.8,34.6,49.8,30.7,46.3,28.3z"/>
+									<rect id="icon-rectangle" x="36.5" y="21.8" fill="#07A651" width="5" height="15"/>
+								</g>
+								</svg>
+							</div>
+							<div class="next"><!-- <div class="arrow-right"></div> -->
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 65.8 49.7" enable-background="new 0 0 65.8 49.7" xml:space="preserve" class="arrow next white">
+								<g>
+									<polygon fill="#FFFFFF" points="41.2,0 35.5,5.7 50.7,20.8 0,20.8 0,28.8 50.2,28.8 35.1,44 40.7,49.7 65.8,24.6 	"/>
+								</g>
+								</svg>
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 65.8 49.7" enable-background="new 0 0 65.8 49.7" xml:space="preserve" class="arrow next black">
+								<g>
+									<polygon fill="#010101" points="41.2,0 35.5,5.7 50.7,20.8 0,20.8 0,28.8 50.2,28.8 35.1,44 40.7,49.7 65.8,24.6 	"/>
+								</g>
+								</svg>
+							</div>
+							<div class="prev"><!-- <div class="arrow-left"></div> -->
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 60.2 49.7" enable-background="new 0 0 60.2 49.7" xml:space="preserve" class="arrow prev white">
+								<polygon fill="#FFFFFF" points="60.2,20.8 15.6,20.8 30.7,5.7 25.1,0 0,25.1 24.6,49.7 30.2,44 15.1,28.8 60.2,28.8 "/>
+								</svg>							
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+									 viewBox="0 0 60.2 49.7" enable-background="new 0 0 60.2 49.7" xml:space="preserve" class="arrow prev black">
+								<polygon fill="#010101" points="60.2,20.8 15.6,20.8 30.7,5.7 25.1,0 0,25.1 24.6,49.7 30.2,44 15.1,28.8 60.2,28.8 "/>
+								</svg>																
+							</div>
 				    </figure>
 				    <figure class="button-right"></figure>
 				    <figure class="button-left"></figure>
 				    <figure class="button-top"></figure>
 				    <figure class="button-bottom"></figure>
 				 </div> <!-- end of button -->
-				</section>
+	</section>
 
-
+	<section class="cv">
+		<p>Juan Cortes</p>
+		<p><span>_</span>Freelance Web Engineer</p>
+		<p>Skills: HTML, CSS, jQuery</p>
+		<div class="cv-line">-------</div>
+		<p>Experience</p>
+		<p><span style="text-decoration: underline;">Antarctic</span> <br> Technology Director <br>June 2015 - June 2016</p>
+		<section style="margin-left: 2em;">
+			<p>
+			>_Information Architecture<br/>
+			>_Data Scheme - Meteor, Wordpress, Salesforce, Tridion<br/>
+			>_Dev Team Lead<br/>
+			>_Project Management (Scrum master)<br/>
+			>_Digital Strategy<br/>
+			>_Client Facing <br/>
+			>_Communication Strategy<br/>
+			>_UI/UX/Wireframing <br>
+			>_Pitching
+		</p>
+		</section>
+		<p>Freelance Developer <br> Dec 2014 - June 2015</p>
+		<section style="margin-left:2em">
+			<p>
+			>_Scrum Master <br>
+			>_Wordpress development
+			</p>
+		</section>
+	</section>
 </body>
 </html>
 
