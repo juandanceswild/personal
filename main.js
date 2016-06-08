@@ -23,8 +23,9 @@ $(document).ready(function() {
         channel: 1,
         video: "antarcticsite.mp4",
         caption: '<span>Antarctic</span> <br/>  <a href="#" class="info-icon">info</a>',
-        info: "<p><a href='http://antarcti.cc' target='_blank'>Antarctic</a> is the humanity-focused digital agency where I’ve served as Technology Director <br> since 2015.</p> <p>I developed it’s new temporary landing page (check it out on <a href='http://quirktools.com/screenfly/#u=http%3A//antarcti.cc&w=375&h=667&a=37' target='_blank'>mobile</a>, too!) and am currently directing the build of the new site.</p>",
-        link: "http://antarcti.cc"
+        info: "<p><a href='http://antarcti.cc' target='_blank'>Antarctic</a> is the humanity-focused digital agency where I’ve served as Technology Director <br> since 2015.</p> <p>I developed it’s new temporary landing page <span class='hidmob'>(check it out on <a href='http://quirktools.com/screenfly/#u=http%3A//antarcti.cc&w=375&h=667&a=37' target='_blank'>mobile</a>, too!)</span> and am currently directing the build of the new site.</p>",
+        link: "http://antarcti.cc",
+        background: "antarctic.jpg"
     };
 
     var actForCompassion = {
@@ -32,7 +33,8 @@ $(document).ready(function() {
         video: "actforcompassion.mp4",
         caption: '<span>Act for Compassion</span> <br/>  <a href="#" class="info-icon">info</a> ',
         info: "<p><a href='https://www.compassion.com/act/build-your-fundraiser.htm' target='_blank'>Act for Compassion</a> is a custom crowdfunding web app built for <a href='http://compassion.com' target='_blank'>Compassion</a>, an international non profit that releases children from poverty through a sponsorship program.</p> <p>The platform allows advocates to fundraise and connect children with new sponsors.</p>",
-        link: "http://www.actforcompassion.com"
+        link: "http://www.actforcompassion.com",
+        background: "compassion.jpg"
     };
 
     var davidCasavant = {
@@ -40,7 +42,8 @@ $(document).ready(function() {
         video: "davidcasavant.mp4",
         caption: '<span>David Casavant</span> <br/>  <a href="#" class="info-icon">info</a>',
         info: "<p><a href='http://david-casavant.com' target='_blank'>David Casavant</a> is a celebrity stylist and fashion archivist in New York.</p>",
-        link: "http://david-casavant.com"
+        link: "http://david-casavant.com",
+        background:"casavant.jpg"
     };
 
     var rmhc = {
@@ -48,7 +51,8 @@ $(document).ready(function() {
         video: "rmhc.mp4",
         caption: "<span>Ronald McDonald House Charities</span> <br/>  <a href='#' class='info-icon'>info</a>",
         info: "<p><a href='http://rmhc.org' target='_blank'>Ronald McDonald House Charities</a> needed a website that was compliant with web accessibility standards. I directed the project to re-develop it.</p>",
-        link: "http://www.rmhc.org"
+        link: "http://www.rmhc.org",
+        background:"rmhc.jpg"
     };
 
     var channels = [antarcticHomepage, actForCompassion, davidCasavant, rmhc];
@@ -86,18 +90,27 @@ $(document).ready(function() {
         $('.screen .vid.channel > p').html(channelToShow.channel);
         $('.screen .vid.info .single-info').html(channelToShow.info);
         $('.screen .vid.info .project-link').attr("href", channelToShow.link);
+        if (handheld) {
+            $('.screen .vid.info').css("background-image","url('backgrounds/"+channelToShow.background+ "')");
+        }
     };
 
     function pressPower(mobile) {
         showChannel(currentChannel);
-        $('.screen video').toggle();
-        if(!mobile){$('.screen video').get(0).play();}
-        $('.intro').toggle();
-        if ( $('.vid.info').css('display') == 'none' ){
-            $('.vid:not(".info")').toggle();
-        } else {
-            $('.vid').toggle();
+        if (mobile) {
+            $('.vid.info').toggle();
+            $('.vid:not(".info")').css('display','none');
         }
+        else {
+            $('.screen video').toggle().get(0).play();
+            if ( $('.vid.info').css('display') === 'none' ){
+                $('.vid:not(".info")').toggle();
+            } else {
+                $('.vid').toggle();
+            }
+        }
+        $('.intro').toggle();
+
         $('.pow').toggleClass('on');        
     }
 
