@@ -554,7 +554,12 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
 
 @media only screen and (max-width: 770px) and (orientation: portrait) {
   .touchevents {
-    .mobile-instructions {display:block;}
+    .mobile-instructions {
+      display:block;
+      .green {
+        color:#4CFF41;
+      }
+    }
     .desktop-instructions {display:none;}
     .button-container {
       display:none;

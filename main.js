@@ -33,7 +33,7 @@ $(document).ready(function() {
         video: "actforcompassion.mp4",
         caption: '<span>Act for Compassion</span> <br/>  <a href="#" class="info-icon">info</a> ',
         info: "<p><a href='https://www.compassion.com/act/build-your-fundraiser.htm' target='_blank'>Act for Compassion</a> is a custom crowdfunding web app built for <a href='http://compassion.com' target='_blank'>Compassion</a>, an international non profit that releases children from poverty through a sponsorship program.</p> <p>The platform allows advocates to fundraise and connect children with new sponsors.</p>",
-        link: "http://www.actforcompassion.com",
+        link: "https://www.compassion.com/act/brazil.htm",
         background: "compassion.jpg"
     };
 
