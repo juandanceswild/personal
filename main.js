@@ -23,7 +23,7 @@ $(document).ready(function() {
         channel: 1,
         video: "antarcticsite.mp4",
         caption: '<span>Antarctic</span> <br/>  <a href="#" class="info-icon">info</a>',
-        info: "<p><a href='http://antarcti.cc' target='_blank'>Antarctic</a> is the humanity-focused digital agency where I’ve served as Technology Director <br> since 2015.</p> <p>I developed it’s new temporary landing page <span class='hidmob'>(check it out on <a href='http://quirktools.com/screenfly/#u=http%3A//antarcti.cc&w=375&h=667&a=37' target='_blank'>mobile</a>, too!)</span> and am currently directing the build of the new site.</p>",
+        info: '<p><a href="http://antarcti.cc" target="_blank">Antarctic</a> is the digital agency where I’ve served as Technology Director since 2015.</p><p>I led and project managed digital design, production, maintenance and expansion for integrated crowdfunding platforms, non-profit websites, and e-commerce stores, working extensively with frameworks and platforms like Foundation, MeteorJS, Wordpress, Magento, Shopify, and Salesforce’s site.com. I was product manager and SCRUM master in agile teams, and conducted client meetings, presentations and project deliveries. I also participated in strategy and ideation for venture projects and pitches and collaborated with Montreal-based partner agency <a href="http://naisgood.com" target="_blank">N/A</a>.</p>',
         link: "http://antarcti.cc",
         background: "antarctic.jpg"
     };
@@ -32,7 +32,7 @@ $(document).ready(function() {
         channel: 2,
         video: "actforcompassion.mp4",
         caption: '<span>Act for Compassion</span> <br/>  <a href="#" class="info-icon">info</a> ',
-        info: "<p><a href='https://www.compassion.com/act/build-your-fundraiser.htm' target='_blank'>Act for Compassion</a> is a custom crowdfunding web app built for <a href='http://compassion.com' target='_blank'>Compassion</a>, an international non profit that releases children from poverty through a sponsorship program.</p> <p>The platform allows advocates to fundraise and connect children with new sponsors.</p>",
+        info: "<p><a href='https://www.compassion.com/act/build-your-fundraiser.htm' target='_blank'>Act for Compassion</a> is a custom crowdfunding web app built for <a href='http://compassion.com' target='_blank'>Compassion</a>, an international non profit that releases children from poverty through a sponsorship program.</p> <p>The platform allows advocates to fundraise and connect children with new sponsors.</p><p>I was the product owner and SCRUM master of the agile team responsible for producing and delivering creative content, copywriting and layout front-end files for the platform. I worked on-site in Compassion's HQ integrating the layout files to a backbone.js application on a corporate Tridion CMS system with the in-house IT team, and consulted through the process in UI/UX design and creative leadership for a team of over 15 people.</p>",
         link: "https://www.compassion.com/act/brazil.htm",
         background: "compassion.jpg"
     };
@@ -41,7 +41,7 @@ $(document).ready(function() {
         channel: 3,
         video: "davidcasavant.mp4",
         caption: '<span>David Casavant</span> <br/>  <a href="#" class="info-icon">info</a>',
-        info: "<p><a href='http://david-casavant.com' target='_blank'>David Casavant</a> is a celebrity stylist and fashion archivist in New York.</p>",
+        info: "<p><a href='http://david-casavant.com' target='_blank'>David Casavant</a> is a celebrity stylist and fashion archivist in New York.</p><p>I directed the digital development of a custom Wordpress multisite theme that features a fully responsive horizontal infinite-scroll photographic gallery.</p>",
         link: "http://david-casavant.com",
         background:"casavant.jpg"
     };
@@ -50,31 +50,43 @@ $(document).ready(function() {
         channel: 4,
         video: "rmhc.mp4",
         caption: "<span>Ronald McDonald House Charities</span> <br/>  <a href='#' class='info-icon'>info</a>",
-        info: "<p><a href='http://rmhc.org' target='_blank'>Ronald McDonald House Charities</a> needed a website that was compliant with web accessibility standards. I directed the project to re-develop it.</p>",
+        info: "<p><a href='http://rmhc.org' target='_blank'>Ronald McDonald House Charities</a>  has chapters in more than 65 countries, and is an organization with a complex technology ecosystem. I directed the re-development of their global website (built on Salesforce’s site.com) to comply with ADA accessibility standards, and the upgrading of a custom Wordpress theme for <a href='https://rmhc-ctx.org/' target='_blank'>chapters</a>.</p> <p>I also participated in an exploratory project for the global launch of the <a href='https://www.rmhccanada.ca/' target='_blank'>Make Fun Matter</a> crowdfunding platform, for which I supported creative production.</p>",
         link: "http://www.rmhc.org",
         background:"rmhc.jpg"
     };
 
-    var channels = [antarcticHomepage, actForCompassion, davidCasavant, rmhc];
+    var asquared = {
+        channel: 5,
+        video: "asquared.mp4",
+        caption: "<span>A-squared.cc</span> <br/>  <a href='#' class='info-icon'>info</a>",
+        info: "<p><a href='http://a-squared.cc' target='_blank'>A²</a> is a venture project incubated at <a href='http://antarcti.cc' target='_blank'>Antarctic</a> to provide graphic design services on-the-go. I was the project lead on the MeteorJS build of its MVP.</p>",
+        link: "http://www.a-squared.cc",
+        background:"asquared.jpg"
+    };
+
+    var channels = [antarcticHomepage, actForCompassion, davidCasavant, rmhc, asquared];
 
 
 
     // function to rotate 3d objects following mouse
-    $('body').mousemove(function(event) {
-        cx = Math.ceil($('body').width() / 2.0);
-        cy = Math.ceil($('body').height() / 2.0);
-        dx = event.pageX - cx;
-        dy = event.pageY - cy;
-        tiltx = - (dy / cy);
-        tilty =  (dx / cx);
-        radius = Math.sqrt(Math.pow(tiltx,2) + Math.pow(tilty,2));
-        degree = (radius * 10);
+    if (!handheld) {
+        $('body').mousemove(function(event) {
+            cx = Math.ceil($('body').width() / 2.0);
+            cy = Math.ceil($('body').height() / 2.0);
+            dx = event.pageX - cx;
+            dy = event.pageY - cy;
+            tiltx = - (dy / cy);
+            tilty =  (dx / cx);
+            radius = Math.sqrt(Math.pow(tiltx,2) + Math.pow(tilty,2));
+            degree = (radius * 10);
 
-        $('#cube, #button').css('-webkit-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
-        $('#cube, #button').css('-moz-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
-        $('#cube, #button').css('transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
+            $('#cube, #button').css('-webkit-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
+            $('#cube, #button').css('-moz-transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
+            $('#cube, #button').css('transform','rotate3d(' + tiltx + ', ' + tilty + ', 0, ' + degree + 'deg)');
 
-    });
+        });        
+    }
+
 
     //function to show a channel on the screen 
     function showChannel(number) {
@@ -90,6 +102,8 @@ $(document).ready(function() {
         $('.screen .vid.channel > p').html(channelToShow.channel);
         $('.screen .vid.info .single-info').html(channelToShow.info);
         $('.screen .vid.info .project-link').attr("href", channelToShow.link);
+        // $('.screen .vid.info').scrollTop(0);
+        $('.vid.info').mCustomScrollbar("scrollTo",'top', {scrollInertia:0});
         if (handheld) {
             $('.screen .vid.info').css("background-image","url('backgrounds/"+channelToShow.background+ "')");
         }
@@ -98,15 +112,15 @@ $(document).ready(function() {
     function pressPower(mobile) {
         showChannel(currentChannel);
         if (mobile) {
-            $('.vid.info').toggle();
-            $('.vid:not(".info")').css('display','none');
+            $('.vid.js-info').toggle();
+            $('.vid:not(".js-info")').css('display','none');
         }
         else {
             $('.screen video').toggle().get(0).play();
-            if ( $('.vid.info').css('display') === 'none' ){
-                $('.vid:not(".info")').toggle();
+            if ( $('.vid.js-info').css('display') === 'none' ){
+                $('.vid:not(".js-info")').toggle();
             } else {
-                $('.vid').toggle();
+                $('.vid:not(".vid.caption, .vid.channel")').toggle();
             }
         }
         $('.intro').toggle();
@@ -137,20 +151,25 @@ $(document).ready(function() {
     };    
 
     //change channel on mobile tap
-    $('.touchevents .mob-tap').on('click', function(event){
-        if ($(this).hasClass('tv-off')) { 
-            $(this).removeClass('tv-off').addClass('tv-on');
-            pressPower(true); 
-        } else if ( $(this).hasClass('tv-on') ) {
-            if (currentChannel === channels.length) {
-                pressPower(true);
-                $(this).removeClass('tv-on').addClass('tv-off'); 
-                currentChannel = 1;            
-            }else {
-                nextChannel(true);
+    if (handheld) {
+        $('.touchevents .screen').on('click', function(event){
+            // console.log('event target is '+ event.target.nodeName);
+            if (event.target.nodeName === 'A') {return;}
+            if ($(this).hasClass('tv-off')) { 
+                $(this).removeClass('tv-off').addClass('tv-on');
+                pressPower(true); 
+            } else if ( $(this).hasClass('tv-on') ) {
+                if (currentChannel === channels.length) {
+                    pressPower(true);
+                    $(this).removeClass('tv-on').addClass('tv-off'); 
+                    currentChannel = 1;            
+                }else {
+                    nextChannel(true);
+                }
             }
-        }
-    })
+        })        
+    }
+
 
     //visual pressed effect and channel change for arrows on the controller
     var clicker = $('#button div.prev, #button div.next');
@@ -174,14 +193,14 @@ $(document).ready(function() {
     $('.screen').on('click', '.info-icon', function(event){
         event.preventDefault;
         // console.log('clicked info');
-        $('.vid.info').toggle();
+        $('.vid.js-info, .vid.channel, .vid.caption').toggle();
     });
 
-    //click on 'back' button
-    $('.screen').on('click', '.vid.info .close', function(event){
+    //click on 'info close' button
+    $('.screen').on('click', '.vid.close-info', function(event){
         event.preventDefault();
         // console.log('clicked close');
-        $('.vid.info').toggle();
+        $('.vid.js-info, .vid.channel, .vid.caption').toggle();
     });
 
 
@@ -210,8 +229,20 @@ $(document).ready(function() {
                 next();
             });
         }
+        else if (e.keyCode == '27') {
+            //escape key
+            if ($('.vid.info').is(':visible')) {
+                $('.screen .vid.close-info').click();
+            }
+        }
 
     }
+
+
+    // Listen for orientation changes
+        window.addEventListener("orientationchange", function() {
+            window.location.reload()
+        }, false);
 
 
 });

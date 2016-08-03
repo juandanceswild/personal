@@ -12,17 +12,19 @@ Thanks to chloemaes.com for her help with the design of this website. <3 -->
 	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
 	<script src="modernizr.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<script src="main.js"></script>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.css" />
 </head>
 <body>
 	
 	<section class="container">
 	  <div id="cube">
 	    <figure class="front">
-	    	<div class="screen">
+	    	<div class="screen tv-off">
 	    		<div class="mob-tap tv-off"></div>
 	    		<div class="intro">
 	    			<p>Hello, my name is <span class="my-name">Juan Cortes</span> <br class="hidmob" /> and I am a web engineer based in Brooklyn, currently available for commissions and projects. <br /><br /> I strive to innovate, have fun and <br class="hidmob" />craft intelligent experiences.</p>
@@ -115,7 +117,7 @@ Thanks to chloemaes.com for her help with the design of this website. <3 -->
 		    		</p>
 	    		</div>
 	    		<div class="vid channel"><p>1</p></div>
-	    		<div class="vid info">
+	    		<div class="vid info mCustomScrollbar js-info" data-mcs-theme="minimal">
 		    		<section class="single-info">
 			    		<p>This is the information of the first video</p>
 			    		<p>I'm going to say a little what I did for each project?</p>
@@ -124,10 +126,11 @@ Thanks to chloemaes.com for her help with the design of this website. <3 -->
 		    		</section>
 		    		<p class="info-links">
 						<a href="" target="_blank" class="project-link">Visit Project</a>
-			    		<a href="#" class="js-pow hidmob">About Me</a>
-			    		<a href="#" class="close hidmob">Back</a>
+			    		<a href="mailto:juancoob@gmail.com" >Contact me</a>
 		    		</p>
 	    		</div>
+	    		<div class="close-info js-info vid"><i class="fa fa-times" aria-hidden="true"></i></div>
+
 	    	</div>
 	    </figure>
 	    <figure class="back"></figure>
@@ -215,77 +218,7 @@ Thanks to chloemaes.com for her help with the design of this website. <3 -->
 		</section>
 	</section>
 
-	<section class="mobile">
-		<div class="first screen">
-	    		<div class="intro">
-	    			<p>Hello, my name is Juan Cortes and I am a web engineer based in New York, currently available for commissions and projects. <br /><br /> I strive to innovate, have fun, do good, and craft intelligent experiences.</p>
-	    			<p>I've worked in projects for <a href="http://actforcompassion.com" target="_blank">Compassion International</a>, <a href="http://rmhc.org" target="_blank">Ronald McDonald House Charities</a>, and <a href="http://david-casavant.com" target="_blank">David Casavant</a> through agencies like <a href="http://antarcti.cc" target="_blank">Antarctic</a> and <a href="http://naisgood.com" target="_blank">N/A.</a></p>
-	    			
-	    			<p><!-- <a href="#" class="cv-link">CV</a> --> <a href="mailto:juancoob@gmail.com">Contact me.</a></p>
-	    			<div class="icons">
-						<a href="http://codepen.io/juandanceswild/" target="_blank">
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								 viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" class="codepen">
-							<path d="M23.983,8.165c-0.006-0.029-0.01-0.059-0.019-0.086c-0.004-0.017-0.011-0.033-0.016-0.05
-								c-0.009-0.026-0.016-0.05-0.026-0.075c-0.008-0.017-0.016-0.033-0.024-0.05c-0.011-0.023-0.022-0.046-0.035-0.068
-								c-0.009-0.016-0.02-0.032-0.03-0.048c-0.014-0.021-0.027-0.042-0.044-0.063c-0.011-0.015-0.022-0.03-0.035-0.044
-								c-0.015-0.02-0.032-0.039-0.05-0.057c-0.015-0.014-0.027-0.028-0.042-0.041c-0.019-0.017-0.04-0.033-0.059-0.049
-								c-0.016-0.012-0.03-0.025-0.047-0.035c-0.005-0.004-0.01-0.008-0.017-0.013L12.571,0.174c-0.347-0.231-0.797-0.231-1.144,0
-								L0.459,7.486c-0.006,0.005-0.01,0.009-0.017,0.013C0.426,7.511,0.411,7.522,0.395,7.534C0.375,7.55,0.356,7.566,0.337,7.583
-								C0.323,7.596,0.309,7.61,0.296,7.624C0.278,7.642,0.261,7.66,0.245,7.68C0.232,7.695,0.222,7.708,0.21,7.725
-								C0.195,7.745,0.18,7.766,0.166,7.788C0.157,7.804,0.146,7.819,0.137,7.835C0.125,7.858,0.113,7.88,0.102,7.904
-								c-0.007,0.017-0.016,0.033-0.023,0.05c-0.01,0.024-0.019,0.05-0.026,0.075C0.047,8.046,0.04,8.062,0.036,8.079
-								C0.029,8.107,0.023,8.136,0.018,8.165C0.015,8.18,0.011,8.195,0.009,8.21C0.004,8.254,0,8.299,0,8.344v7.311
-								c0,0.046,0.003,0.091,0.009,0.134c0.002,0.016,0.005,0.03,0.008,0.045c0.006,0.029,0.011,0.058,0.019,0.086
-								c0.004,0.018,0.011,0.033,0.016,0.05c0.008,0.026,0.017,0.051,0.026,0.076c0.006,0.017,0.015,0.033,0.023,0.05
-								c0.011,0.023,0.022,0.046,0.035,0.069c0.01,0.017,0.02,0.033,0.029,0.048c0.014,0.021,0.027,0.042,0.044,0.063
-								c0.012,0.017,0.023,0.03,0.035,0.045c0.016,0.02,0.033,0.037,0.051,0.055c0.013,0.014,0.027,0.028,0.041,0.042
-								c0.018,0.017,0.038,0.032,0.058,0.048C0.41,16.478,0.426,16.49,0.442,16.5c0.007,0.004,0.011,0.008,0.017,0.013l10.967,7.312
-								c0.174,0.115,0.373,0.174,0.573,0.174s0.398-0.057,0.572-0.174l10.968-7.312c0.006-0.004,0.011-0.008,0.017-0.013
-								c0.016-0.011,0.031-0.023,0.047-0.035c0.021-0.016,0.04-0.031,0.058-0.048c0.015-0.014,0.028-0.027,0.042-0.042
-								c0.019-0.018,0.036-0.036,0.052-0.055c0.013-0.015,0.024-0.028,0.035-0.045c0.015-0.021,0.029-0.042,0.044-0.063
-								c0.008-0.017,0.02-0.031,0.029-0.048c0.012-0.022,0.025-0.046,0.035-0.069c0.007-0.016,0.016-0.033,0.023-0.05
-								c0.01-0.025,0.019-0.05,0.027-0.076c0.005-0.017,0.013-0.032,0.017-0.05c0.006-0.028,0.012-0.057,0.018-0.086
-								c0.002-0.015,0.006-0.029,0.008-0.045C23.996,15.745,24,15.7,24,15.655V8.344c0-0.046-0.003-0.091-0.009-0.134
-								C23.989,8.195,23.985,8.18,23.983,8.165L23.983,8.165z M12.001,14.441l-3.647-2.44l3.647-2.439l3.647,2.439L12.001,14.441z
-								 M10.971,7.77L6.499,10.76L2.891,8.346l8.08-5.387V7.77z M4.645,12.001l-2.58,1.725v-3.45L4.645,12.001z M6.499,13.242l4.472,2.989
-								v4.81l-8.08-5.387L6.499,13.242L6.499,13.242z M13.031,16.231l4.472-2.989l3.609,2.414l-8.081,5.388V16.231L13.031,16.231z
-								 M19.358,12.001l2.58-1.726v3.45L19.358,12.001z M17.503,10.76L13.031,7.77v-4.81l8.081,5.387L17.503,10.76z"/>
-							</svg>
-							</a>
 
-						
-						<a href="http://github.com/juandanceswild" target="_blank"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								  viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;"
-								 xml:space="preserve" class="github">
-							<g>
-								<path d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
-									c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
-									c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
-									c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
-									c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559
-									c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559
-									c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997
-									c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851
-									c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136
-									c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41
-									c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126
-									c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817
-									c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994
-									c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849
-									c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24
-									c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979
-									c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
-									c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
-									c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
-									C438.536,184.851,428.728,148.168,409.132,114.573z"/>
-							</g>
-							
-							</svg></a>
-	    			</div>
-	    		</div>			
-		</div>
-	</section>
 </body>
 </html>
 

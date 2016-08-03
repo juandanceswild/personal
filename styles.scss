@@ -400,7 +400,7 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
   width:100%;
   height:100%;
   color: white;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 1.5em 2em;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -415,16 +415,37 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
   top: 0;
   right:0;
   left:0;
+  overflow-y: scroll;
+  p {
+    background-color:transparent;
+  }
 }
 
-.vid.info .single-info {
+section.single-info {
+    min-height: 80%;
+}
+
+.vid.info .single-info, .info-links {
   text-align: left;
-  font-size: 3.5vh;
+  font-size: 3.2vh;
   font-weight: 400;
 }
 
-.vid.info .single-info a {
+.vid.info .single-info a, .info-links a {
   font-weight: bold;
+}
+
+.screen .close-info {
+  position: absolute;
+  top: 0.5em;
+  right: 0.8em;
+  display:none;
+  opacity:0.8
+}
+
+.screen .close-info:hover {
+  opacity:1;
+  cursor: pointer;
 }
 
 
@@ -488,12 +509,9 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
   -moz-transform: translate3d(0,0,0);
 }
 
-.intro .intro-links, .info-links {
-    position: absolute;
-    margin: auto;
-    bottom: .5em;
-    left: 0;
-    right: 0;
+.vid p.info-links {
+  text-align: left;
+  margin-top:1em;
 }
 
 .info-links a {
@@ -502,6 +520,16 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
 
 .info-links a:nth-of-type(3) {
   margin:none;
+}
+
+
+
+.intro .intro-links, {
+    position: absolute;
+    margin: auto;
+    bottom: .5em;
+    left: 0;
+    right: 0;
 }
 
 .intro .icons {
@@ -552,7 +580,7 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
   z-index:10;
 }
 
-@media only screen and (max-width: 770px) and (orientation: portrait) {
+@media only screen and (max-width: 770px) and (orientation: portrait), only screen and (max-width: 750px) and (orientation: landscape) {
   .touchevents {
     .mobile-instructions {
       display:block;
@@ -588,8 +616,9 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
         }
         .screen {
           font-size: 3.5vh;
+          .close-info {visibility:hidden;}
           .mob-tap {
-            display:block;
+            // display:block;
           }
           video {
             position:relative;
@@ -604,7 +633,7 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
             background-position-x: 50%;
             &:before {
               content: "";
-              position: absolute;
+              position: fixed;
               width: 100%;
               height: 100%;
               background-color: rgba(0, 0, 0, 0.65);
@@ -618,6 +647,10 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
           }
           .info-links {
             left:2em;
+            a {
+              display:inline-block;
+              margin-top:0.5em;
+            }
           }
           .intro {
             padding: 1.5em;
@@ -643,79 +676,15 @@ div.next:hover svg.arrow.white, div.prev:hover svg.arrow.white {
 }
 
 
-@media only screen and (max-width: 750px) and (orientation: landscape) {
-  .touchevents {  
-    .container {
-      top:1em;
-      width: 90vw;
-      #cube .right {
-        transform: translateX(90vw) translateX(-2em) rotateY(90deg);
-        -webkit-transform: translateX(90vw) translateX(-2em) rotateY(90deg);
-        -moz-transform: translateX(90vw) translateX(-2em) rotateY(90deg);
-      }
-      .screen {
-        font-size: 1em;
-        .vid.info {
-          background-size: cover;
-          background-position: 50% 50%;
-          &:before {
-              content: "";
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              background-color: rgba(0, 0, 0, 0.65);
-              top: 0;
-              left: 0;
-            }
-        }
-        .vid p {
-          background-color:transparent;
-        }
-        br.hidmob {
-          // display:none;
-        }
-        a.hidmob {
-          display:none;
-        }
-      }
-      .vid.caption.animated {
-        opacity:1;
-        animation: initial;
-        -webkit-animation: initial;
-        -moz-animation: initial;
-      }        
-    }
-    .button-container {
-      width: 11em;
-      height: 3em;
-      top:-2.5em;
-      #button {      
-        .pow {
-          width:2.5em;
-          margin-top: 0.3em;
-        }
-        div.btn {
-          width:2em;
-          margin-top:0.3em;
-        }
-        .button-right {
-          -webkit-transform: translateX(11em) translateX(-50%) rotateY(90deg);
-          -moz-transform: translateX(11em) translateX(-50%) rotateY(90deg);
-          transform: translateX(11em) translateX(-50%) rotateY(90deg);
-        }
-        .button-bottom {
-          -moz-transform: translateY(3em) translateY(-50%) rotateX(-90deg);
-          -webkit-transform: translateY(3em) translateY(-50%) rotateX(-90deg);
-          transform: translateY(3em) translateY(-50%) rotateX(-90deg);
-        }
-      }
-    }
+ @media only screen and (max-width: 750px) and (orientation: landscape) {
+  // .vid.info .info-links {
+  //   position:absolute;
+  //   bottom: 0.5em;
+  // }
+
+  .vid.info .single-info, .info-links, .intro {
+    font-size: 1.3em;
   }
-}
+ }
 
 
-
-
-.mobile {
-  display:none;
-}
